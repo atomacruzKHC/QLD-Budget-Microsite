@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QLD Budget 2025-26: Strategic Recruitment Insights for Kingston Human Capital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Kingston Human Capital Branding & Aesthetic: Professional, clean, and modern.
+         Palette: Using a clean white/light grey background, dark text for readability, and a primary accent blue (#0D6EFD) for highlights, aligning with a professional corporate feel.
+         Font: Inter, as requested and suitable for corporate readability.
+         Rounded corners and subtle shadows are used for a polished look. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA; /* Light Grey Background */
+            color: #212529; /* Dark Text */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 450px;
+            max-height: 50vh;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 400px;
+                max-height: 60vh;
+            }
+        }
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #0D6EFD; /* Accent Blue */
+            border-bottom-color: #0D6EFD; /* Accent Blue */
+        }
+        .card-active {
+            box-shadow: 0 0 0 2px #0D6EFD; /* Accent Blue border for active cards */
+            border-color: #0D6EFD !important;
+        }
+        .text-accent-blue {
+            color: #0D6EFD; /* Accent Blue */
+        }
+        .bg-accent-blue {
+            background-color: #0D6EFD; /* Accent Blue */
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Styles for tabbed interface */
+        .content-page {
+            display: none; /* Hidden by default */
+        }
+        .content-page.active {
+            display: block; /* Shown when active */
+        }
+        .completed-item {
+            text-decoration: line-through;
+            color: #6c757d; /* Muted color for completed items */
+        }
+        /* Styles for expandable project cards */
+        .project-card-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            opacity: 0;
+        }
+        .project-card.expanded .project-card-details {
+            max-height: 1000px; /* Sufficiently large to show content */
+            opacity: 1;
+        }
+        .project-card-toggle-btn {
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            color: #0D6EFD;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .project-card-toggle-btn:hover {
+            color: #0a58ca;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white sticky top-0 z-40 w-full border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-accent-blue rounded-md flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-lg">KHC</span>
+                    </div>
+                    <h1 class="text-xl md:text-2xl font-bold text-gray-800">QLD Budget 2025-26: Recruitment Insights</h1>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-gray-600 border-b-2 border-transparent pb-1 active" data-target="overview-page">Overview</a>
+                    <a href="#" class="nav-link text-gray-600 border-b-2 border-transparent pb-1" data-target="growth-page">Growth Areas</a>
+                    <a href="#" class="nav-link text-gray-600 border-b-2 border-transparent pb-1" data-target="monitor-page">Monitor List</a>
+                    <a href="#" class="nav-link text-gray-600 border-b-2 border-transparent pb-1" data-target="initiatives-page">Major Initiatives</a>
+                    <a href="#" class="nav-link text-gray-600 border-b-2 border-transparent pb-1" data-target="projects-strategy-page">Projects & Strategy</a>
+                    <a href="#" class="nav-link text-gray-600 border-b-2 border-transparent pb-1" data-target="action-plan-page">Action Plan</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <div id="content-pages">
+            <section id="overview-page" class="content-page active mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-2 text-gray-900">Welcome to Your QLD Budget Recruitment Guide</h2>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 mt-2">
+                        This interactive guide provides a strategic overview of the 2025-26 Queensland State Budget, tailored to help Kingston Human Capital identify key opportunities and risks in the public sector recruitment landscape, with a focus on professional roles.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">What's Inside This Guide?</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Overview: A snapshot of the budget's key figures and strategic pillars.</li>
+                            <li>Growth Areas: Interactive charts and detailed insights on departments with significant FTE and funding increases, highlighting where hiring is likely to surge for professional roles.</li>
+                            <li>Monitor List: A clear table of departments facing FTE reductions or funding shifts, crucial for understanding potential reduced demand for professional roles.</li>
+                            <li>Major Initiatives: An overview of large-scale government programs that will drive demand for specialised professional skills.</li>
+                            <li>Projects & Strategy: Actionable insights on specific upcoming projects, ideal strategic approaches, and how to win recruitment opportunities for Finance, Accounting, Infrastructure, Administration, and Executive positions.</li>
+                            <li>Action Plan: A dynamic tool to prioritise departments and initiatives, add notes, and track progress for your team's business development strategy.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">How to Leverage This Resource for Business Development</h3>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <li>Explore Growth Areas: Use the interactive chart to identify top departments for new client acquisition and expand existing relationships for professional placements.</li>
+                            <li>Understand Initiatives: Dive into major programs to pinpoint specific project-based or niche professional recruitment needs.</li>
+                            <li>Monitor Risks: Stay informed about departments facing reductions to anticipate market shifts and adjust your strategy proactively for professional roles.</li>
+                            <li>Build Your Action Plan: Go to the "Action Plan" tab to prioritise targets, add specific notes for your team, and track your progress collaboratively (locally saved).</li>
+                            <li>Inform Your Pitches: Use the detailed insights to tailor your sales pitches, demonstrating a deep understanding of government priorities and departmental needs for professional talent.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <p class="text-4xl font-bold text-accent-blue">+5,721</p>
+                        <p class="text-md text-gray-500 mt-1">Net FTE Growth in Key Depts</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <p class="text-4xl font-bold text-accent-blue">$33.1B</p>
+                        <p class="text-md text-gray-500 mt-1">Record Health Investment</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <p class="text-4xl font-bold text-accent-blue">$116.8B</p>
+                        <p class="text-md text-gray-500 mt-1">4-Year Infrastructure Program</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="growth-page" class="content-page mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Departments Scaling Up (Professional Roles Focus)</h2>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 mt-2">
+                        This section visualises departments with the most significant hiring potential for professional, administrative, finance, accounting, and executive roles. The chart below highlights FTE increases, representing direct growth in personnel. Click a department's bar to instantly see a detailed breakdown of its key initiatives, funding, and specific recruitment implications relevant to Kingston Human Capital.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
+                    <h3 class="text-xl font-semibold mb-2 text-center text-gray-800">Top Departments by Absolute FTE Growth (2025-26)</h3>
+                    <p class="text-center text-sm text-gray-500 mb-4">Click a bar to see details below</p>
+                    <div class="chart-container">
+                        <canvas id="fteGrowthChart"></canvas>
+                    </div>
+                </div>
+                
+                <div id="department-details-container" class="mt-12">
+                </div>
+
+                <div class="mt-16 bg-white p-8 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaway: Growth Areas</h3>
+                    <p class="text-gray-700 max-w-3xl mx-auto">
+                        The budget strongly prioritises core public services like Health, Education, and Police, indicating sustained high-volume recruitment needs for corporate, administrative, and strategic support professionals. Significant capital investments in Housing and Infrastructure also present high-value opportunities for project management, infrastructure (professional), and financial roles. Focus your efforts here for immediate and long-term client engagement.
+                    </p>
+                </div>
+            </section>
+
+            <section id="monitor-page" class="content-page mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Departments to Monitor (Professional Roles Context)</h2>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 mt-2">
+                        This table outlines departments projected to have FTE reductions. These changes are often due to Machinery-of-Government (MOG) realignments or the conclusion of temporary programs, signalling a shift in hiring needs rather than a complete stop. This information is vital for a balanced market view for professional recruitment.
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">FTE Change</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primary Reason & Professional Implications</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monitor-table-body" class="bg-white divide-y divide-gray-200">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-16 bg-white p-8 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaway: Departments to Monitor</h3>
+                    <p class="text-gray-700 max-w-3xl mx-auto">
+                        FTE reductions in these departments are largely due to structural (MOG) changes or program conclusions, not necessarily a complete halt in professional hiring. While overall demand may decrease, specific, reallocated functions or niche project needs for administrative, financial, or project-based professional roles might still emerge. Maintain awareness and targeted engagement.
+                    </p>
+                </div>
+            </section>
+            
+            <section id="initiatives-page" class="content-page mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Major Strategic Initiatives (Driving Professional Demand)</h2>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 mt-2">
+                        Beyond individual departments, the budget funds several large-scale, multi-year initiatives. These cross-cutting programs will generate sustained demand for specialised professional skills in project management, finance, administration, executive leadership, and various technical fields, offering a broader view of market opportunities for Kingston Human Capital.
+                    </p>
+                </div>
+
+                <div id="initiatives-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+
+                <div class="mt-16 bg-white p-8 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaway: Major Initiatives</h3>
+                    <p class="text-gray-700 max-w-3xl mx-auto">
+                        These large-scale, multi-year programs represent a consistent and long-term demand for specialised professional skills across various government entities. Look for opportunities in executive, project management, financial, administrative, and technical roles that span departmental boundaries.
+                    </p>
+                </div>
+            </section>
+
+            <section id="projects-strategy-page" class="content-page mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Upcoming Projects & Strategic Approaches for Professional Roles</h2>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 mt-2">
+                        This section highlights specific upcoming government projects derived from the budget's major initiatives. For each project, we've identified key professional recruitment needs (Finance, Accounting, Infrastructure, Administration, Executive, Project Management, Procurement, Business Support), ideal strategic approaches for Kingston Human Capital, and actionable tips on how to win these opportunities. Click on a card to expand its details.
+                    </p>
+                </div>
+
+                <div id="projects-strategy-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project cards will be dynamically inserted here -->
+                </div>
+
+                <div class="mt-16 bg-white p-8 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Takeaway: Projects & Strategy</h3>
+                    <p class="text-gray-700 max-w-3xl mx-auto">
+                        These major projects offer concrete targets for your business development within the professional services landscape. By understanding their specific executive, project management, policy, financial, administrative, and infrastructure recruitment needs, and adopting these tailored strategic approaches, Kingston Human Capital can effectively position itself to secure these significant opportunities and contribute to Queensland's future with high-calibre talent.
+                    </p>
+                </div>
+            </section>
+
+            <section id="action-plan-page" class="content-page">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Build Your Action Plan</h2>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 mt-2">
+                        Use this section to prioritise departments and major initiatives for your sales and recruitment efforts. Select a priority level, add specific notes, and mark items as complete. Your plan will be saved in your browser for future reference.
+                    </p>
+                </div>
+                
+                <div id="username-prompt" class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-8 rounded-md" role="alert">
+                    <p class="font-bold">Heads up!</p>
+                    <p>Please enter your name below to track who makes changes to the action plan. This is saved only in your browser.</p>
+                    <div class="mt-4 flex items-center">
+                        <input type="text" id="username-input" class="shadow-sm focus:ring-accent-blue focus:border-accent-blue block w-full sm:text-sm border-gray-300 rounded-md p-2" placeholder="Your Name">
+                        <button id="set-username-btn" class="ml-3 px-4 py-2 bg-accent-blue text-white font-semibold rounded-md shadow hover:bg-blue-700 transition-colors duration-200">Set Name</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Prioritise Departments</h3>
+                        <div id="action-plan-departments" class="space-y-6">
+                            <!-- Department action cards will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Prioritise Major Initiatives</h3>
+                        <div id="action-plan-initiatives" class="space-y-6">
+                            <!-- Initiative action cards will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">My Action Plan Summary</h3>
+                    <div id="my-action-plan-summary" class="space-y-4">
+                        <p class="text-gray-600">No items added to the plan yet. Select priorities and add notes above to build your summary.</p>
+                    </div>
+                    <button id="clear-plan-btn" class="mt-8 px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition-colors duration-200">Clear Plan</button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    
+    <footer class="mt-16 py-8 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-300">
+             <p>Kingston Human Capital | Strategic Recruitment Insights</p>
+             <p class="text-sm mt-1 text-gray-400">Data sourced from 2025-26 Queensland State Budget Papers</p>
+        </div>
+    </footer>
+
+<script>
+const budgetData = {
+    growthDepartments: [
+        { id: 'health', name: 'Queensland Health', fte_change: 4704, funding_note: 'Record $33.1B budget; +$6.5B over 4 yrs', initiatives: ['Hospital Rescue Plan (3 new, 10 upgraded hospitals)', 'Elective Surgery Waitlist Stabilisation', 'QAS Paramedic Recruitment', 'Target: 46,000 additional health workers by 2032'], implications: 'Critical need for project and facilities management for new builds, corporate services (HR, Finance, Procurement), and administrative leadership to manage expansion.' },
+        { id: 'education', name: 'Dept of Education', fte_change: 493, funding_note: '$14.9B budget; +$830M expense change', initiatives: ['Construction of 15 New Schools & Special Schools', 'More Teachers, Better Education Plan', 'Health Sciences Academy in Rockhampton'], implications: 'Consistent demand for administrative, financial, and project delivery professionals for new facilities and specific programs.' },
+        { id: 'police', name: 'Queensland Police Service', fte_change: 296, funding_note: '$4.05B budget; +$324M expense change', initiatives: ['Making Queensland Safer Laws implementation', 'Recruitment of 1,600 Police Recruits', 'Investment in frontline equipment'], implications: 'Potential for policy, legal support, IT, and administrative roles related to new legislation and corporate support for frontline expansion.' },
+        { id: 'youth', name: 'Dept of Youth Justice & Victim Support', fte_change: 205, funding_note: '$770.9M total budget', initiatives: ['Rehabilitation Programs (Staying on Track)', 'Early Intervention Initiatives (Kickstarter)', 'Youth Crime Reduction Efforts'], implications: 'Significant demand for program managers, policy officers, and administrative professionals for rehabilitation and early intervention initiatives.' },
+        { id: 'primary', name: 'Dept of Primary Industries', fte_change: 123, funding_note: '$817.2M budget; -$82.3M expense change', initiatives: ['Boosting Biosecurity (100 new officers)', 'Shark Control Program', 'Farm Business Resilience Program'], implications: 'Targeted recruitment for administrative, policy, and program management roles supporting agricultural resilience and biosecurity programs.' },
+        { id: 'families', name: 'Dept of Families & Child Safety', fte_change: 89, funding_note: '$3.6B total budget', initiatives: ['Child Safety Placement Boost', 'Safer Children Safer Communities', 'Domestic/Family Violence Prevention'], implications: 'Strong demand for program managers, policy officers, and administrative support roles in child safety and family violence prevention.' },
+        { id: 'housing', name: 'Dept of Housing & Public Works', fte_change: 58, funding_note: 'Capital works focus; $1.97B over 4 yrs', initiatives: ['Housing Investment Pipeline (53,500 social homes)', 'Crisis Accommodation expansion', 'Frontline Housing Services'], implications: 'Massive, long-term program requiring project managers, financial managers, urban planners, and administrative support staff for housing delivery.' },
+        { id: 'treasury', name: 'Queensland Treasury', fte_change: 57, funding_note: '$931M budget; +$164M expense change', initiatives: ['Office of Social Impact establishment', 'Boost to Buy Scheme', 'Energy Roadmap and Legislation Review'], implications: 'Need for high-level policy analysts, economists, and financial experts to support new fiscal strategies and reviews.' },
+        { id: 'dsdid', name: 'Dept of State Dev, Infra & Planning', fte_change: 36, funding_note: '$1.89B budget; +$528M expense change', initiatives: ['Residential Activation Fund ($2B)', '2032 Games Delivery Plan', 'Sovereign Industry Development Fund'], implications: 'High demand for urban planners, infrastructure project managers, and economic development specialists. Huge opportunities for contract roles.' }
+    ],
+    monitorDepartments: [
+        { name: 'Dept of Transport and Main Roads', fte_change: -1228, reason: 'MOG Change: Transfer of Customer & Digital Services functions out. Core infrastructure professional roles remain or are growing in TMR.' },
+        { name: 'Queensland Corrective Services', fte_change: -174, reason: 'Operations Shift: Reduced demand at existing centres after new facility opening. Future professional roles expected for new Lockyer Valley facility.' },
+        { name: 'Department of Justice', fte_change: -57, reason: 'MOG Change: Transfer of Women’s Safety & Victim Assist functions. Potential for new professional roles in receiving departments.' },
+        { name: 'Dept of Women & ATSI Partnerships', fte_change: -27, reason: 'MOG Change & conclusion of temporary programs. Policy and program management roles may shift or be re-prioritised.' },
+        { name: 'Dept of Natural Resources & Mines', fte_change: -19, reason: 'Cessation of temporary positions for Limited Life Programs. Core professional roles likely stable.' }
+    ],
+    majorInitiatives: [
+        { title: 'Generational Infrastructure', icon: '🚆', description: 'A record $116.8B 4-year capital program for major transport projects including The Wave (Sunshine Coast Rail), Faster Rail, and Bruce Highway upgrades.' },
+        { title: 'Housing Investment Pipeline', icon: '🏠', description: 'A $1.967B investment over 4 years to deliver 53,500 new social and community homes by 2044, a massive long-term project.' },
+        { title: 'Hospital Rescue Plan', icon: '🏥', description: '$18.5B investment to build 3 new hospitals, expand 10 others, and deliver over 2,600 additional beds, driving huge healthcare demand.' },
+        { title: 'Making QLD Safer Laws', icon: '⚖️', description: '$347.7M rollout to establish a new sex offender register and increase resources for police and legal assistance services.' },
+        { title: 'Destination 2045 (Tourism)', icon: '✈️', description: '$446M investment over 4 years for new tourism product development, aviation attraction, and major event promotion.' },
+        { title: 'Energy & Grid Investments', icon: '⚡️', description: 'Significant funding for projects like the CopperString and Borumba Pumped Hydro to support the state\'s energy transition.' }
+    ],
+    projectsAndStrategy: [
+        {
+            id: 'hospital-infra',
+            title: 'Hospital Infrastructure (Rescue Plan)',
+            icon: '�',
+            departments: 'Queensland Health',
+            briefDescription: 'Substantial $16.9B investment for 3 new hospitals and 10 expansions, adding over 2,600 beds. Requires robust administrative, project management, and corporate services support.',
+            keyNeeds: [
+                'Executive & Senior Leadership (Hospital Directors, Health Service Executives)',
+                'Project Directors & Project Managers (construction, health infrastructure, asset maintenance)',
+                'Program Managers (health service transformation, waitlist stabilisation)',
+                'Corporate Services Professionals (HR, Finance, Procurement, Contract Management)',
+                'Strategic Policy & Planning Advisors',
+                'Financial Managers & Accountants (budget management, capital expenditure)',
+                'Senior Administrators & Executive Assistants'
+            ],
+            strategicApproach: [
+                'Engage proactively with Corporate Services, Project Delivery Units, and Executive Offices within Queensland Health.',
+                'Highlight expertise in sourcing experienced project/program leadership, corporate support, and financial management.',
+                'Tailor proposals on operational and strategic roles for large-scale health system transformation.'
+            ],
+            howToWin: [
+                'Showcase deep understanding of government project methodologies (QGCIO) and health corporate governance.',
+                'Emphasize rapid placement for critical leadership, financial, and administrative roles.',
+                'Highlight successful placements in complex, high-stakes government environments requiring financial acumen and administrative precision.',
+                'Provide strategic workforce planning advice.'
+            ]
+        },
+        {
+            id: 'olympic-venues',
+            title: 'Olympic Venues (Brisbane 2032 Games)',
+            icon: '🏟️',
+            departments: 'Dept of Sport, Racing, and Olympic and Paralympic Games (OPGO), Games Independent Infrastructure and Coordination Authority (GIICA), Dept of State Development, Infrastructure and Planning',
+            briefDescription: 'A $7.1B investment for new/upgraded sports venues and athletes\' villages. Requires infrastructure project, commercial, and stakeholder engagement professionals.',
+            keyNeeds: [
+                'Executive & Senior Leadership (Program Directors, Venue Development Managers for GIICA/OPGO)',
+                'Infrastructure Project Directors & Senior Project Managers (venue design, procurement, delivery)',
+                'Commercial Managers & Contract Specialists (stadium/venue contracts, public-private partnerships)',
+                'Procurement & Legal Advisors (high-value venue projects, athlete villages)',
+                'Communications & Stakeholder Engagement Advisors',
+                'Urban Planners (athletes\' villages, precinct development)',
+                'Financial Managers & Accountants (budget oversight, financial reporting for Games projects)',
+                'Senior Administrative & Project Support Staff'
+            ],
+            strategicApproach: [
+                'Engage directly with GIICA and OPGO.',
+                'Focus on long-term program pipelines, high-level strategic engagements, and executive search.',
+                'Position Kingston HC as experts in senior infrastructure project leadership, financial oversight, and commercial management for major government events.',
+                'Offer tailored contract/temporary staffing for professional project lifecycles, including administrative support.'
+            ],
+            howToWin: [
+                'Showcase proven track record in high-calibre talent for complex, multi-stakeholder infrastructure/major events.',
+                'Highlight extensive network of senior project directors, commercial managers, and financial professionals with large-scale capital works experience.',
+                'Emphasise ability to provide specialist skills for specific project phases (design, procurement, delivery, legacy).',
+                'Demonstrate deep understanding of government procurement and project governance for 2032 Games.'
+            ]
+        },
+        {
+            id: 'million-homes',
+            title: '1 Million Homes Plan (Residential Activation Fund)',
+            icon: '🏡',
+            departments: 'Dept of Housing & Public Works, Dept of State Development, Infrastructure and Planning (EDQ)',
+            briefDescription: 'A $2B Residential Activation Fund to unlock new housing developments, facilitating 1 million new homes by 2044. Requires significant planning, development, and infrastructure project coordination.',
+            keyNeeds: [
+                'Executive & Senior Leadership (Directors of Property Development, Housing Program Leads)',
+                'Urban Planners & Regional Planners',
+                'Property Development & Acquisition Specialists',
+                'Infrastructure Project Coordinators & Project Managers (water, sewer, road infrastructure)',
+                'Policy Analysts (planning approvals, housing policy reform)',
+                'Financial & Investment Analysts (funding models, economic modelling)',
+                'Accountants (program budgeting, compliance)',
+                'Stakeholder Engagement Officers',
+                'Senior Administrative & Program Support Staff'
+            ],
+            strategicApproach: [
+                'Target DHPW executive, policy, property development teams, and EDQ.',
+                'Emphasise understanding of property development, financial models, and social impact goals.',
+                'Highlight expertise in sourcing professional talent for complex social infrastructure projects, including financial/administrative oversight.'
+            ],
+            howToWin: [
+                'Demonstrate commitment to the social purpose.',
+                'Showcase ability to source candidates with relevant experience in property/construction, urban planning, social policy, and public sector finance.',
+                'Offer insights into workforce planning for long-term housing solutions, including executive/administrative talent.',
+                'Highlight success in placing professionals who can juggle multiple civil infrastructure projects.'
+            ]
+        },
+        {
+            id: 'digital-gov',
+            title: 'Digital Government Transformation ($1B Fund)',
+            icon: '💻',
+            departments: 'Dept of Customer Services, Open Data and Small Business (central), various government departments (implementation)',
+            briefDescription: 'A $1.0B fund over four years to modernise IT systems (cloud, cybersecurity, online portals). Major driver for ICT, project management, and business analysis professionals.',
+            keyNeeds: [
+                'Executive & Senior Leadership (CIOs, Directors of Digital Transformation)',
+                'ICT Project Managers & Program Managers (system upgrades, cloud migration, new portals)',
+                'Solutions Architects & Enterprise Architects',
+                'Business Analysts & UX Designers',
+                'Cybersecurity Specialists & IT Risk Advisors',
+                'Change Management Experts',
+                'Data Analysts & Data Scientists',
+                'Shared Service Finance/HR Specialists',
+                'Senior Administrative & Project Support Staff'
+            ],
+            strategicApproach: [
+                'Target the new Dept of Customer Services as the central hub.',
+                'Highlight expertise in sourcing ICT professionals, project managers, and business analysts for complex digital initiatives.',
+                'Emphasise understanding of cybersecurity priorities and data governance.',
+                'Offer flexible contracting solutions for rapid project ramp-up.'
+            ],
+            howToWin: [
+                'Showcase proven experience in digital transformation within large, complex organisations (ideally government).',
+                'Highlight strong network of pre-vetted ICT and project management professionals.',
+                'Demonstrate ability to provide specialists in niche areas (cybersecurity, cloud architecture, data analytics).',
+                'Position as a partner capable of rapidly scaling teams for new digital initiatives.'
+            ]
+        },
+        {
+            id: 'transport-connect',
+            title: 'Transport & Connectivity Programs (Generational Infrastructure)',
+            icon: '🛣️',
+            departments: 'Dept of Transport & Main Roads (TMR), Dept of State Development, Infrastructure and Planning',
+            briefDescription: 'A record $116.8B 4-year capital program for major transport projects (Bruce Highway, Faster Rail, Cross River Rail). Drives demand for infrastructure project management, engineering (design/planning), and procurement professionals.',
+            keyNeeds: [
+                'Executive & Senior Leadership (Project Directors, General Managers of Infrastructure Delivery)',
+                'Civil, Structural, Traffic, and Environmental Engineers (design, planning & project management focused)',
+                'Program Managers & Senior Project Managers (large-scale road/rail projects)',
+                'Procurement & Contract Administration Specialists (high-value infrastructure contracts)',
+                'Quantity Surveyors & Cost Estimators',
+                'Transport Planners & Policy Advisors',
+                'Financial Managers & Project Accountants (infrastructure funding, cost control)',
+                'Communications & Stakeholder Engagement Officers',
+                'Senior Administrative & Project Support Staff',
+                'CEO & Leadership Team (for new Sunshine Coast Waterways Authority)',
+                'Policy & Regulatory Officers (for Waterways Authority)'
+            ],
+            strategicApproach: [
+                'Target TMR\'s Infrastructure Delivery division and DSDIP\'s planning teams.',
+                'Position Kingston HC as experts in senior infrastructure project leadership, engineering (design/planning), financial oversight, and procurement for complex government transport projects.',
+                'Offer tailored contract/temporary staffing for professional project lifecycles, including administrative support.'
+            ],
+            howToWin: [
+                'Showcase proven track record in high-calibre talent for complex government infrastructure programs, including executive/financial roles.',
+                'Highlight extensive network of senior engineers, project directors, planning, and finance specialists with infrastructure experience.',
+                'Emphasise ability to provide specialist skills for specific project phases (planning, design, financial close).',
+                'Demonstrate deep understanding of government procurement, project governance, and financial accountability for large capital works.'
+            ]
+        },
+        {
+            id: 'energy-grid',
+            title: 'Energy & Grid Investments',
+            icon: '⚡',
+            departments: 'Queensland Treasury (oversight), Dept of State Development, Infrastructure and Planning (delivery), Energy Queensland (via GOCs)',
+            briefDescription: 'Significant funding for projects like CopperString and Borumba Pumped Hydro to support energy transition. Drives demand for specialized engineering, strategic, financial, and administrative roles.',
+            keyNeeds: [
+                'Executive & Senior Leadership (Energy Policy Directors, Infrastructure Investment Leads)',
+                'Electrical Engineers (high-voltage, power generation, transmission - design & project focused)',
+                'Renewable Energy Specialists & Consultants',
+                'Environmental Scientists & Approvals Managers',
+                'Project Directors & Senior Project Managers (large-scale energy infrastructure)',
+                'Policy Analysts (energy transition, market regulation, carbon emissions)',
+                'Investment & Financial Analysts (energy projects, economic modelling)',
+                'Accountants (project accounting, financial reporting for energy assets)',
+                'Senior Administrative & Corporate Support Staff'
+            ],
+            strategicApproach: [
+                'Target relevant divisions within Treasury, DSDIP, and Energy Queensland involved in energy policy, project delivery, and corporate functions.',
+                'Position Kingston HC as experts in green economy and energy sector professional recruitment, including executive/financial leadership.',
+                'Network actively with energy sector industry bodies and professional associations.'
+            ],
+            howToWin: [
+                'Highlight deep expertise in the emerging energy/renewables sector, specifically for professional, executive, and financial roles.',
+                'Showcase strong network of senior engineers, environmental specialists, policy advisors, and finance professionals with energy sector experience.',
+                'Demonstrate clear understanding of the long-term energy roadmap and its executive/professional talent implications, including complex financial structures.'
+            ]
+        },
+        {
+            id: 'tafe-upgrades',
+            title: 'Training & Employment Initiatives (TAFE Upgrades)',
+            icon: '🎓',
+            departments: 'Dept of Trade, Employment and Training, TAFE Queensland, Dept of Public Works',
+            briefDescription: 'Around $199M for new TAFE infrastructure (Rockhampton, Caloundra, Moreton Bay) and expanded apprenticeship programs. Drives demand for project management, administrative, and financial oversight professionals.',
+            keyNeeds: [
+                'Project Directors & Project Managers (TAFE infrastructure construction)',
+                'Facilities Planners & Campus Development Officers',
+                'Procurement Specialists (TAFE builds, training contracts)',
+                'Program Coordinators & Training Program Managers',
+                'HR Professionals (TAFE recruitment drives, corporate functions)',
+                'Policy Officers (skills planning, workforce development)',
+                'Contract Managers (funding community training providers)',
+                'Evaluation Officers & Data Analysts (track program outcomes)',
+                'Financial Administrators & Accountants (program budgeting, compliance)',
+                'Administrative & Corporate Support Roles'
+            ],
+            strategicApproach: [
+                'Target Dept of Trade, Employment and Training, and TAFE Queensland\'s corporate/infrastructure divisions.',
+                'Position Kingston HC as experts in sourcing project management, administrative, and financial professionals for educational infrastructure/workforce development.',
+                'Highlight understanding of long-term skills agenda and efficient program delivery.'
+            ],
+            howToWin: [
+                'Showcase expertise in placing professionals in educational/vocational training sectors, particularly for infrastructure projects.',
+                'Emphasise ability to provide candidates who understand government funding models and program evaluation.',
+                'Highlight capacity to support both capital works and administrative/financial oversight of training initiatives.'
+            ]
+        }
+    ]
+};
+
+// Function to recursively remove asterisks from an object or string
+function removeAsterisks(data) {
+    if (typeof data === 'string') {
+        return data.replace(/\*/g, '');
+    }
+    if (typeof data === 'object' && data !== null) {
+        if (Array.isArray(data)) {
+            return data.map(item => removeAsterisks(item));
+        }
+        const newData = {};
+        for (const key in data) {
+            if (Object.prototype.hasOwnProperty.call(data, key)) {
+                newData[key] = removeAsterisks(data[key]);
+            }
+        }
+        return newData;
+    }
+    return data;
+}
+
+// Apply the function to the entire budgetData object
+const cleanedBudgetData = removeAsterisks(budgetData);
+
+// Now use cleanedBudgetData for rendering
+const finalBudgetData = cleanedBudgetData;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let activeDepartmentId = null;
+    let fteChart = null;
+    let actionPlanItems = []; // Stores items added to the action plan
+    let currentUsername = localStorage.getItem('qldBudgetUsername') || '';
+
+    const contentPages = document.querySelectorAll('.content-page');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const departmentDetailsContainer = document.getElementById('department-details-container');
+    const monitorTableBody = document.getElementById('monitor-table-body');
+    const initiativesGrid = document.getElementById('initiatives-grid');
+    const projectsStrategyGrid = document.getElementById('projects-strategy-grid'); // New grid for P&S
+    const actionPlanDepartmentsContainer = document.getElementById('action-plan-departments');
+    const actionPlanInitiativesContainer = document.getElementById('action-plan-initiatives');
+    const myActionPlanSummary = document.getElementById('my-action-plan-summary');
+    const clearPlanBtn = document.getElementById('clear-plan-btn');
+    const usernamePrompt = document.getElementById('username-prompt');
+    const usernameInput = document.getElementById('username-input');
+    const setUsernameBtn = document.getElementById('set-username-btn');
+
+    // Initial setup for username prompt
+    if (currentUsername) {
+        usernameInput.value = currentUsername;
+        usernamePrompt.style.display = 'none'; // Hide if username is already set
+    } else {
+        usernamePrompt.style.display = 'block'; // Show if username is not set
+    }
+
+    setUsernameBtn.addEventListener('click', () => {
+        const name = usernameInput.value.trim();
+        if (name) {
+            currentUsername = name;
+            localStorage.setItem('qldBudgetUsername', currentUsername);
+            usernamePrompt.style.display = 'none';
+        } else {
+            alert('Please enter a valid name.'); // Using alert for simplicity as per previous instruction to avoid custom modals for simple cases.
+        }
+    });
+
+    // Function to save action plan to localStorage
+    function saveActionPlan() {
+        localStorage.setItem('qldBudgetActionPlan', JSON.stringify(actionPlanItems));
+    }
+
+    // Function to load action plan from localStorage
+    function loadActionPlan() {
+        const savedPlan = localStorage.getItem('qldBudgetActionPlan');
+        if (savedPlan) {
+            actionPlanItems = JSON.parse(savedPlan);
+        }
+    }
+
+    // Function to show a specific page and hide others
+    function showPage(pageId) {
+        contentPages.forEach(page => {
+            page.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.dataset.target === pageId) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    function createDepartmentDetailCard(dept) {
+        const card = document.createElement('div');
+        card.id = `dept-card-${dept.id}`;
+        card.className = 'dept-card bg-white p-6 rounded-xl border border-gray-200 transition-all duration-300 fade-in';
+        card.style.display = 'none'; // Initially hidden
+
+        // Filter initiatives to focus on professional relevance for display
+        const professionalInitiatives = dept.initiatives.filter(item => 
+            !item.includes('doctors') && !item.includes('nurses') && !item.includes('paramedics') &&
+            !item.includes('teachers') && !item.includes('teacher aides') && !item.includes('police recruits') &&
+            !item.includes('social workers') && !item.includes('youth justice officers') && !item.includes('frontline')
+        );
+        let initiativesList = professionalInitiatives.map(item => `<li class="flex items-start"><span class="text-accent-blue mr-2 mt-1">✓</span><span>${item}</span></li>`).join('');
+        if (initiativesList === '') {
+            initiativesList = '<li class="text-gray-500">No specific professional initiatives detailed in this summary. Refer to "Projects & Strategy" for broader project impacts.</li>';
+        }
+
+
+        // Refine implications to focus on professional roles
+        let professionalImplications = dept.implications;
+        if (dept.id === 'health') {
+            professionalImplications = 'Critical need for project and facilities management for new builds, corporate services (HR, Finance, Procurement), and administrative leadership to manage expansion.';
+        } else if (dept.id === 'education') {
+            professionalImplications = 'Consistent demand for administrative, financial, and project delivery professionals for new facilities and specific programs.';
+        } else if (dept.id === 'police') {
+            professionalImplications = 'Potential for policy, legal support, IT, and administrative roles related to new legislation and corporate support for frontline expansion.';
+        } else if (dept.id === 'youth') {
+            professionalImplications = 'Significant demand for program managers, policy officers, and administrative professionals for rehabilitation and early intervention initiatives.';
+        } else if (dept.id === 'primary') {
+            professionalImplications = 'Targeted recruitment for administrative, policy, and program management roles supporting agricultural resilience and biosecurity programs.';
+        } else if (dept.id === 'families') {
+            professionalImplications = 'Strong demand for program managers, policy officers, and administrative support roles in child safety and family violence prevention.';
+        } else if (dept.id === 'housing') {
+            professionalImplications = 'Massive, long-term program requiring project managers, financial managers, urban planners, and administrative support staff for housing delivery.';
+        } else if (dept.id === 'treasury') {
+            professionalImplications = 'Need for high-level policy analysts, economists, and financial experts to support new fiscal strategies and reviews.';
+        } else if (dept.id === 'dsdip') {
+            professionalImplications = 'High demand for urban planners, infrastructure project managers, and economic development specialists. Huge opportunities for contract roles.';
+        }
+
+
+        card.innerHTML = `
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800">${dept.name}</h3>
+                    <p class="text-sm text-gray-500">${dept.funding_note}</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-2xl font-bold ${dept.fte_change > 0 ? 'text-green-600' : 'text-red-600'}">${dept.fte_change > 0 ? '+' : ''}${dept.fte_change}</p>
+                    <p class="text-sm text-gray-500">FTE Change</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 pt-4 border-t">
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-gray-700">Key Initiatives (Professional Focus)</h4>
+                    <ul class="space-y-2 text-gray-600">${initiativesList}</ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-gray-700">Recruitment Implications (Professional Roles)</h4>
+                    <p class="text-gray-600">${professionalImplications}</p>
+                </div>
+            </div>
+        `;
+        return card;
+    }
+
+    function updateDepartmentDetails(selectedId) {
+        const currentlyActiveCard = document.querySelector('.card-active');
+        if (currentlyActiveCard) {
+            currentlyActiveCard.classList.remove('card-active');
+            document.getElementById(`dept-card-${currentlyActiveCard.dataset.id}`).style.display = 'none';
+        }
+        
+        if (activeDepartmentId === selectedId) {
+            activeDepartmentId = null; // Toggle off if clicking the same one
+            return;
+        }
+
+        const detailCard = document.getElementById(`dept-card-${selectedId}`);
+        if (detailCard) {
+            detailCard.style.display = 'block';
+            activeDepartmentId = selectedId;
+            detailCard.classList.add('card-active');
+            detailCard.dataset.id = selectedId;
+            // No scrollIntoView needed for tabbed interface
+        }
+    }
+    
+    function renderGrowthSection() {
+        const sortedData = [...finalBudgetData.growthDepartments].sort((a, b) => b.fte_change - a.fte_change);
+
+        sortedData.forEach(dept => {
+            const card = createDepartmentDetailCard(dept);
+            departmentDetailsContainer.appendChild(card);
+        });
+
+        const ctx = document.getElementById('fteGrowthChart').getContext('2d');
+        fteChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: sortedData.map(d => d.name),
+                datasets: [{
+                    label: 'FTE Growth',
+                    data: sortedData.map(d => d.fte_change),
+                    backgroundColor: 'rgba(13, 110, 253, 0.7)',
+                    borderColor: '#0D6EFD',
+                    borderWidth: 1,
+                    hoverBackgroundColor: '#0D6EFD',
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(context) {
+                                return `FTE Change: ${context.raw}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Absolute FTE Change'
+                        },
+                        grid: {
+                            color: '#e9ecef'
+                        }
+                    },
+                    y: {
+                         ticks: {
+                            autoSkip: false
+                         },
+                         grid: {
+                            display: false
+                         }
+                    }
+                },
+                onClick: (event, elements) => {
+                    if (elements.length > 0) {
+                        const clickedIndex = elements[0].index;
+                        const selectedDeptId = sortedData[clickedIndex].id;
+                        updateDepartmentDetails(selectedDeptId);
+                    }
+                }
+            }
+        });
+    }
+
+    function renderMonitorSection() {
+        monitorTableBody.innerHTML = ''; // Clear existing content
+        finalBudgetData.monitorDepartments.forEach(dept => {
+            const row = document.createElement('tr');
+            let professionalReason = dept.reason;
+            if (dept.name === 'Dept of Transport and Main Roads') {
+                professionalReason = 'MOG Change: Transfer of Customer & Digital Services functions out. Core infrastructure professional roles remain or are growing in TMR.';
+            } else if (dept.name === 'Queensland Corrective Services') {
+                professionalReason = 'Operations Shift: Reduced demand at existing centres after new facility opening. Future professional roles expected for new Lockyer Valley facility.';
+            } else if (dept.name === 'Department of Justice') {
+                professionalReason = 'MOG Change: Transfer of Women’s Safety & Victim Assist functions. Potential for new professional roles in receiving departments.';
+            } else if (dept.name === 'Dept of Women & ATSI Partnerships') {
+                professionalReason = 'MOG Change & conclusion of temporary programs. Policy and program management roles may shift or be re-prioritised.';
+            } else if (dept.name === 'Dept of Natural Resources & Mines') {
+                professionalReason = 'Cessation of temporary positions for Limited Life Programs. Core professional roles likely stable.';
+            }
+
+
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm font-medium text-gray-900">${dept.name}</div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm font-semibold text-red-600">${dept.fte_change}</div>
+                </td>
+                <td class="px-6 py-4 whitespace-normal">
+                    <div class="text-sm text-gray-600">${professionalReason}</div>
+                </td>
+            `;
+            monitorTableBody.appendChild(row);
+        });
+    }
+
+    function renderInitiativesSection() {
+        initiativesGrid.innerHTML = ''; // Clear existing content
+        finalBudgetData.majorInitiatives.forEach(initiative => {
+            const card = document.createElement('div');
+            card.className = "bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col items-center text-center";
+            card.innerHTML = `
+                <div class="text-5xl mb-4 text-accent-blue">${initiative.icon}</div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">${initiative.title}</h4>
+                <p class="text-gray-600 flex-grow">${initiative.description}</p>
+            `;
+            initiativesGrid.appendChild(card);
+        });
+    }
+
+    function renderProjectsStrategySection() {
+        projectsStrategyGrid.innerHTML = ''; // Clear existing content
+        finalBudgetData.projectsAndStrategy.forEach(project => {
+            const card = document.createElement('div');
+            card.id = `project-card-${project.id}`;
+            card.className = "project-card bg-white p-6 rounded-xl border border-gray-200 shadow-sm transition-all duration-300";
+            card.innerHTML = `
+                <div class="flex items-center mb-3">
+                    <div class="text-4xl mr-4 text-accent-blue">${project.icon}</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">${project.title}</h3>
+                        <p class="text-sm text-gray-600">Relevant Depts: ${project.departments}</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">${project.briefDescription}</p>
+                
+                <div class="project-card-details">
+                    <h4 class="font-semibold text-lg text-gray-700 mb-2">Key Recruitment Needs (Professional Roles):</h4>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        ${project.keyNeeds.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                    <h4 class="font-semibold text-lg text-gray-700 mb-2">Strategic Approach:</h4>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        ${project.strategicApproach.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                    <h4 class="font-semibold text-lg text-gray-700 mb-2">How to Win the Game:</h4>
+                    <ul class="list-disc list-inside text-gray-600">
+                        ${project.howToWin.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <button class="project-card-toggle-btn" data-target-id="${project.id}">Read More</button>
+            `;
+            projectsStrategyGrid.appendChild(card);
+        });
+
+        // Add event listeners for toggling details
+        document.querySelectorAll('.project-card-toggle-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const targetId = event.target.dataset.targetId;
+                const card = document.getElementById(`project-card-${targetId}`);
+                const details = card.querySelector('.project-card-details');
+                
+                if (card.classList.contains('expanded')) {
+                    card.classList.remove('expanded');
+                    event.target.textContent = 'Read More';
+                } else {
+                    // Collapse any other open cards
+                    document.querySelectorAll('.project-card.expanded').forEach(openCard => {
+                        openCard.classList.remove('expanded');
+                        openCard.querySelector('.project-card-toggle-btn').textContent = 'Read More';
+                    });
+
+                    card.classList.add('expanded');
+                    event.target.textContent = 'Show Less';
+                }
+            });
+        });
+    }
+
+    function updateActionPlanSummary() {
+        if (actionPlanItems.length === 0) {
+            myActionPlanSummary.innerHTML = '<p class="text-gray-600">No items added to the plan yet. Select priorities and add notes above to build your summary.</p>';
+            return;
+        }
+
+        myActionPlanSummary.innerHTML = '';
+        actionPlanItems.sort((a, b) => {
+            const priorityOrder = { 'High': 1, 'Medium': 2, 'Low': 3 };
+            return priorityOrder[a.priority] - priorityOrder[b.priority];
+        }).forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = `bg-gray-50 p-4 rounded-lg border border-gray-200 ${item.completed ? 'completed-item' : ''}`;
+            
+            let completedByInfo = '';
+            if (item.completed && item.completedBy && item.completedAt) {
+                const date = new Date(item.completedAt).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' });
+                completedByInfo = `<span class="text-xs text-gray-500 ml-2">(Completed by ${item.completedBy} on ${date})</span>`;
+            }
+
+            itemDiv.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <p class="font-semibold text-gray-800">${item.name} <span class="text-sm font-normal text-gray-500">(${item.type} - Priority: ${item.priority})</span></p>
+                    <input type="checkbox" data-id="${item.id}" data-type="${item.type}" class="action-plan-checkbox h-5 w-5 text-accent-blue rounded border-gray-300 focus:ring-accent-blue" ${item.completed ? 'checked' : ''}>
+                </div>
+                <p class="text-gray-700 mt-1">${item.notes || 'No specific notes.'} ${completedByInfo}</p>
+            `;
+            myActionPlanSummary.appendChild(itemDiv);
+        });
+
+        // Add event listeners for new checkboxes in the summary
+        document.querySelectorAll('.action-plan-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', (event) => {
+                if (!currentUsername) {
+                    alert('Please set your name in the "Build Your Action Plan" section before marking items complete.');
+                    event.target.checked = !event.target.checked; // Revert checkbox state
+                    return;
+                }
+                const id = event.target.dataset.id;
+                const type = event.target.dataset.type;
+                const itemIndex = actionPlanItems.findIndex(i => i.id === id && i.type === type);
+                if (itemIndex > -1) {
+                    actionPlanItems[itemIndex].completed = event.target.checked;
+                    actionPlanItems[itemIndex].completedBy = currentUsername;
+                    actionPlanItems[itemIndex].completedAt = new Date().toISOString();
+                    saveActionPlan();
+                    updateActionPlanSummary(); // Re-render to show strikethrough and info
+                    renderActionPlanSection(); // Re-render action plan cards to update checkbox state
+                }
+            });
+        });
+    }
+
+    function addToActionPlan(item, type, priority, notes) {
+        const itemId = item.id || item.title.replace(/\s/g, '-'); // Use id for departments, formatted title for initiatives
+        const existingIndex = actionPlanItems.findIndex(i => i.id === itemId && i.type === type);
+        
+        const newItem = { 
+            id: itemId, 
+            name: item.name || item.title, 
+            type, 
+            priority, 
+            notes,
+            completed: false, // Default to not completed
+            completedBy: null,
+            completedAt: null
+        };
+
+        if (existingIndex > -1) {
+            // Preserve completed state if updating an existing item
+            newItem.completed = actionPlanItems[existingIndex].completed;
+            newItem.completedBy = actionPlanItems[existingIndex].completedBy;
+            newItem.completedAt = actionPlanItems[existingIndex].completedAt;
+            actionPlanItems[existingIndex] = newItem;
+        } else {
+            actionPlanItems.push(newItem);
+        }
+        saveActionPlan(); // Save to localStorage after every change
+        updateActionPlanSummary();
+        renderActionPlanSection(); // Re-render action plan cards to update their state
+    }
+
+    function renderActionPlanSection() {
+        actionPlanDepartmentsContainer.innerHTML = ''; // Clear previous content
+        actionPlanInitiativesContainer.innerHTML = ''; // Clear previous content
+
+        finalBudgetData.growthDepartments.forEach(dept => {
+            const card = document.createElement('div');
+            card.className = "bg-white p-6 rounded-xl border border-gray-200 shadow-sm";
+            const currentPlanItem = actionPlanItems.find(item => item.id === dept.id && item.type === 'department');
+            const currentPriority = currentPlanItem ? currentPlanItem.priority : 'Medium';
+            const currentNotes = currentPlanItem ? currentPlanItem.notes : '';
+            const isCompleted = currentPlanItem ? currentPlanItem.completed : false;
+
+            card.innerHTML = `
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">${dept.name}</h4>
+                <p class="text-sm text-gray-600 mb-4">${dept.funding_note}</p>
+                <div class="mb-4">
+                    <label for="priority-dept-${dept.id}" class="block text-sm font-medium text-gray-700">Priority:</label>
+                    <select id="priority-dept-${dept.id}" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-accent-blue focus:border-accent-blue sm:text-sm rounded-md">
+                        <option value="Medium" ${currentPriority === 'Medium' ? 'selected' : ''}>Medium</option>
+                        <option value="High" ${currentPriority === 'High' ? 'selected' : ''}>High</option>
+                        <option value="Low" ${currentPriority === 'Low' ? 'selected' : ''}>Low</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="notes-dept-${dept.id}" class="block text-sm font-medium text-gray-700">Notes:</label>
+                    <textarea id="notes-dept-${dept.id}" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-accent-blue focus:border-accent-blue sm:text-sm" placeholder="e.g., Target specific roles, contact person">${currentNotes}</textarea>
+                </div>
+                <button data-id="${dept.id}" data-type="department" class="add-to-plan-btn w-full px-4 py-2 bg-accent-blue text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200">Add to Plan</button>
+            `;
+            actionPlanDepartmentsContainer.appendChild(card);
+        });
+
+        finalBudgetData.majorInitiatives.forEach(initiative => {
+            const initiativeId = initiative.title.replace(/\s/g, '-');
+            const card = document.createElement('div');
+            card.className = "bg-white p-6 rounded-xl border border-gray-200 shadow-sm";
+            const currentPlanItem = actionPlanItems.find(item => item.id === initiativeId && item.type === 'initiative');
+            const currentPriority = currentPlanItem ? currentPlanItem.priority : 'Medium';
+            const currentNotes = currentPlanItem ? currentPlanItem.notes : '';
+            const isCompleted = currentPlanItem ? currentPlanItem.completed : false;
+
+            card.innerHTML = `
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">${initiative.title}</h4>
+                <p class="text-sm text-gray-600 mb-4">${initiative.description}</p>
+                <div class="mb-4">
+                    <label for="priority-init-${initiativeId}" class="block text-sm font-medium text-gray-700">Priority:</label>
+                    <select id="priority-init-${initiativeId}" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-accent-blue focus:border-accent-blue sm:text-sm rounded-md">
+                        <option value="Medium" ${currentPriority === 'Medium' ? 'selected' : ''}>Medium</option>
+                        <option value="High" ${currentPriority === 'High' ? 'selected' : ''}>High</option>
+                        <option value="Low" ${currentPriority === 'Low' ? 'selected' : ''}>Low</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="notes-init-${initiativeId}" class="block text-sm font-medium text-gray-700">Notes:</label>
+                    <textarea id="notes-init-${initiativeId}" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-accent-blue focus:border-accent-blue sm:text-sm" placeholder="e.g., Key contacts, specific roles, timeline">${currentNotes}</textarea>
+                </div>
+                <button data-id="${initiativeId}" data-type="initiative" class="add-to-plan-btn w-full px-4 py-2 bg-accent-blue text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200">Add to Plan</button>
+            `;
+            actionPlanInitiativesContainer.appendChild(card);
+        });
+
+        document.querySelectorAll('.add-to-plan-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                if (!currentUsername) {
+                    alert('Please set your name in the "Build Your Action Plan" section before adding items.');
+                    return;
+                }
+                const id = event.target.dataset.id;
+                const type = event.target.dataset.type;
+                let item;
+                let prioritySelect;
+                let notesTextarea;
+
+                if (type === 'department') {
+                    item = finalBudgetData.growthDepartments.find(d => d.id === id);
+                    prioritySelect = document.getElementById(`priority-dept-${id}`);
+                    notesTextarea = document.getElementById(`notes-dept-${id}`);
+                } else if (type === 'initiative') {
+                    item = finalBudgetData.majorInitiatives.find(i => i.title.replace(/\s/g, '-') === id);
+                    prioritySelect = document.getElementById(`priority-init-${id}`);
+                    notesTextarea = document.getElementById(`notes-init-${id}`);
+                }
+
+                if (item && prioritySelect && notesTextarea) {
+                    addToActionPlan(item, type, prioritySelect.value, notesTextarea.value);
+                }
+            });
+        });
+
+        clearPlanBtn.addEventListener('click', () => {
+            actionPlanItems.length = 0; // Clear the array
+            saveActionPlan(); // Save the empty array
+            updateActionPlanSummary();
+            // Optionally clear textareas and reset dropdowns
+            document.querySelectorAll('select[id^="priority-"]').forEach(select => select.value = 'Medium');
+            document.querySelectorAll('textarea[id^="notes-"]').forEach(textarea => textarea.value = '');
+            renderActionPlanSection(); // Re-render action plan cards to clear their state
+        });
+
+        updateActionPlanSummary(); // Initial render of the summary
+    }
+    
+    // Setup navigation for tabbed interface
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor link behavior
+            const targetPageId = event.target.dataset.target;
+            showPage(targetPageId);
+        });
+    });
+
+    loadActionPlan(); // Load saved data when the page initializes
+    renderGrowthSection();
+    renderMonitorSection();
+    renderInitiativesSection();
+    renderProjectsStrategySection(); // Call the new rendering function for P&S
+    renderActionPlanSection(); // Render the new action plan section
+    showPage('overview-page'); // Show the overview page by default on load
+});
+</script>
+
+</body>
+</html>
+�
